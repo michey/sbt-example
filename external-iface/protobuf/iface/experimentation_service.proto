@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package iface;
+option java_package = "iface";
+
+message Message {
+  string first_field = 1;
+//  string second_field = 2;
+}

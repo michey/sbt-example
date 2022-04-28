@@ -1,0 +1,7 @@
+.idea
+external-iface/.idea
+external-iface/project/project
+external-iface/project/target
+.bsp
+target
+sbt-example.iml
