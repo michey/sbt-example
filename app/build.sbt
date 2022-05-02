@@ -21,7 +21,6 @@ lazy val exampleProtobuf =
       libraryDependencies ++= Seq(
         "acme" % "external-iface" % "1.0.0" % "protobuf-src" intransitive(),
         "com.thesamet.scalapb" %% "scalapb-runtime" % scalapb.compiler.Version.scalapbVersion,
-        "com.thesamet.scalapb.zio-grpc" %% "zio-grpc-codegen" % "0.5.1"
       ),
       Compile / PB.targets := Seq(
         scalapb.gen() -> (Compile / sourceManaged).value,
