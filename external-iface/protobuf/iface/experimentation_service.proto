@@ -5,5 +5,5 @@ option java_package = "iface";
 
 message Message {
   string first_field = 1;
-  string second_field = 2;
+//  string second_field = 2;
 }
