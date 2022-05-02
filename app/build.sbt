@@ -17,14 +17,14 @@ lazy val exampleProtobuf =
     .settings(
       PB.protocVersion := "3.17.3",
       crossPaths := false,
-//      autoScalaLibrary := false,
+      autoScalaLibrary := false,
       libraryDependencies ++= Seq(
         "acme" % "external-iface" % "2.0.0" % "protobuf-src" intransitive(),
         "com.thesamet.scalapb" %% "scalapb-runtime" % scalapb.compiler.Version.scalapbVersion,
       ),
       Compile / PB.targets := Seq(
         scalapb.gen() -> (Compile / sourceManaged).value,
-        scalapb.zio_grpc.ZioCodeGenerator -> (configuration / sourceManaged).value
+        scalapb.zio_grpc.ZioCodeGenerator -> (Compile / sourceManaged).value
       )
     )
 
