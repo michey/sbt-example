@@ -23,7 +23,8 @@ lazy val exampleProtobuf =
         "com.thesamet.scalapb" %% "scalapb-runtime" % scalapb.compiler.Version.scalapbVersion,
       ),
       Compile / PB.targets := Seq(
-        scalapb.gen() -> (Compile / sourceManaged).value
+        scalapb.gen() -> (Compile / sourceManaged).value,
+        scalapb.zio_grpc.ZioCodeGenerator -> (configuration / sourceManaged).value
       )
     )
 
