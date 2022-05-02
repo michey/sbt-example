@@ -16,6 +16,8 @@ lazy val exampleProtobuf =
   module("internal-proto")
     .settings(
       PB.protocVersion := "3.17.3",
+      crossPaths := false,
+      autoScalaLibrary := false,
       libraryDependencies ++= Seq(
         "acme" % "external-iface" % "1.0.0" % "protobuf-src" intransitive(),
         "com.thesamet.scalapb" %% "scalapb-runtime" % scalapb.compiler.Version.scalapbVersion,
