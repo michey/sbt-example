@@ -18,7 +18,7 @@ lazy val exampleProtobuf =
       PB.protocVersion := "3.17.3",
       libraryDependencies ++= Seq(
         "com.thesamet.scalapb" %% "scalapb-runtime" % scalapb.compiler.Version.scalapbVersion % "protobuf",
-        "acme" % "external-iface" % "2.0.0" % "protobuf-src" intransitive(),
+        "acme" % "external-iface" % "1.0.0" % "protobuf-src" intransitive(),
       ),
       Compile / PB.targets := Seq(
         scalapb.gen() -> (Compile / sourceManaged).value
